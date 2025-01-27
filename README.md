@@ -53,7 +53,7 @@ Download GitLab repositories
 
 **--token, -t**="": GitLab API token for authentication.
 
-**--url, -u**="": URL of the GitLab instance.  (default: https://gitlab.bestsa3.best.com.pl)
+**--url, -u**="": URL of the GitLab instance.  (default: https://gitlab.com)
 
 ## add
 
