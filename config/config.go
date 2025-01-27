@@ -42,7 +42,7 @@ func Init() {
 	}
 }
 
-// Ensures ~/.config/config.yaml is created with the template and returns the filepath
+// Ensures ~/.brr/config.yaml is created with the template and returns the filepath
 func CreateConfig() (string, error) {
 
 	homeDir := facts.GetHomeDirectory()
@@ -61,7 +61,7 @@ func CreateConfig() (string, error) {
 	// check if ~/.brr/config.yaml exists
 	if _, err = os.Stat(configFilePath); errors.Is(err, os.ErrNotExist) {
 
-		// if not create it with the config.yaml
+		// if not, create it with the config.yaml
 		file, err := os.Create(configFilePath)
 		if err != nil {
 			return "", err
