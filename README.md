@@ -2,7 +2,7 @@
 
 ![logo](assets/logo.png)
 
-`brr` is a tool to fetch and process repositories, producing a ready-to-go `repositories.yaml` file for use with the aww CLI.
+`brr` is a tool to fetch and process repositories, producing a ready-to-go `repositories.yaml` file for use with the [aww](https://github.com/bmichalkiewicz/aww) CLI.
 ## Features
 
 - Fetch repositories from GitLab groups and projects.
@@ -21,42 +21,12 @@ The `brr` tool writes repository data in the following structure:
     - ...
 ```
 
-# SYNOPSIS
+## Commands
 
-brr
+```bash
+# example: brr gitlab -g "terraform" -t "ghyr$jrnjyuehd2"
+brr gitlab --help
 
+# example: brr git git@github.com:bmichalkiewicz/brr.git
+brr add --help
 ```
-[--output|-o]=[value]
-[--update|-p]
-```
-
-**Usage**:
-
-```
-brr [GLOBAL OPTIONS] [command [COMMAND OPTIONS]] [ARGUMENTS...]
-```
-
-# GLOBAL OPTIONS
-
-**--output, -o**="": Path where `brr` outputs the repositories.yaml
-
-**--update, -p**: Updates groups already present in the repository file.
-
-
-# COMMANDS
-
-## gitlab
-
-Download GitLab repositories
-
-**--groups, -g**="": A comma-separated list of GitLab group names to fetch repositories. (default: [])
-
-**--token, -t**="": GitLab API token for authentication.
-
-**--url, -u**="": URL of the GitLab instance.  (default: https://gitlab.com)
-
-## add
-
-Add a repository to the repositories file.
-
-**--url**="": The SSH URL of the repository to add.
