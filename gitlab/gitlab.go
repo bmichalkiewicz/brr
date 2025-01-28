@@ -114,7 +114,6 @@ func (gb *GitlabManager) GetGroupProjects(groups []string) ([]*template.GroupTem
 			mu.Lock()
 			configTemplate = append(configTemplate, &template.GroupTemplate{
 				Name:     strings.ReplaceAll(group.FullName, " ", ""),
-				Skip:     false,
 				Projects: projects,
 			})
 			mu.Unlock()

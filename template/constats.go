@@ -9,7 +9,6 @@ var pattern = `^git@([a-zA-Z0-9.-]+):([a-zA-Z0-9_.-]+)(/[a-zA-Z0-9_./-]*)?\.git$
 
 type GroupTemplate struct {
 	Name     string            `yaml:"name"`
-	Skip     bool              `yaml:"skip"`
 	Projects []ProjectTemplate `yaml:"projects"`
 }
 
@@ -51,7 +50,6 @@ func Decode(url string) (*GroupTemplate, error) {
 	// Return the GroupTemplate with the extracted name
 	return &GroupTemplate{
 		Name: mainGroup, // Main group
-		Skip: false,
 		Projects: []ProjectTemplate{
 			{
 				Url: url,
